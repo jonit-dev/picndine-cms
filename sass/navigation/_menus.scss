@@ -1,0 +1,292 @@
+/*Header Navigation*/
+
+.header-background{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    
+    background-color: $pink-logo;
+    
+   
+}
+
+#masthead{
+    display: grid;
+    
+    grid-template-rows: 1fr 190px;
+    grid-template-columns:1fr;
+    padding: 0;
+    
+    background-color: $pink-logo;
+    
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+.custom-logo-link{
+text-align: center;
+}
+
+.custom-logo{
+    height: 150px;
+    width: 150px;
+}
+
+
+.site-branding{
+    display: flex;
+    
+    grid-row:1;
+    
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    
+    color: $header-text; 
+    
+    align-content: end; 
+}
+
+.site-title{
+    margin-top: -20px;
+    align-self: center;
+    justify-content: flex-start;
+    
+    a{
+        color: $header-text;
+        text-decoration: none;
+    }
+    
+    a:visited{
+        color: $header-text;
+    }
+       
+
+}
+
+
+
+#site-navigation{
+ 
+    grid-row: 2;
+    
+    justify-content: end;
+    align-items:end;
+    
+    margin-top: -10px;
+}
+/*.menu-main-menu-container{
+    height: 150px;
+
+}*/
+
+/*.menu-main-menu-container{
+    width: 100%;
+}*/
+
+#primary-menu{
+
+    display: flex;
+    
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    
+    margin: 0;
+    padding: 0;
+}
+
+#primary-menu li{
+list-style-type: none;
+margin: 10px;
+text-align: center;
+/*line-height: 150px;*/
+}
+
+#primary-menu{
+    a{
+   
+    text-decoration: none;
+    color: $header-text; 
+    }
+    
+    /*Menu hover scale effect*/
+    li{
+    transition: 0.5s;
+    }
+    li:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    }
+}
+
+/*End Header Navigation*/
+
+
+
+/*.social-navigation*/
+#colophon{
+    padding: 0;
+    background-color: $dark-purple;
+    margin-bottom: 0;
+}
+
+#menu-social{
+    display: flex;
+    
+    margin-left: -40px;
+    margin-top: -30px;;
+    
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    
+    flex-wrap:wrap;
+    
+    a[href*="facebook"]:before {
+    content: "\f082";
+    font-family: "Font Awesome 5 Brands";
+    text-decoration: none;
+    font-size: 2rem;
+}
+    a[href*="twitter"]:before {
+    content: "\f081";
+    font-family: "Font Awesome 5 Brands";
+    text-decoration: none;
+    font-size: 2rem;
+}
+    a[href*="pinterest"]:before {
+    content: "\f0d3";
+    font-family: "Font Awesome 5 Brands";
+    text-decoration: none;
+    font-size: 2rem;
+}
+    a[href*="youtube"]:before {
+    content: "\f431";
+    font-family: "Font Awesome 5 Brands";
+    text-decoration: none;
+    font-size: 2rem;
+}
+ a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    color: $color-icon;
+    font-size: 1rem;
+    
+    transition: transform 0.5s;
+}
+
+a:visited{
+    color: $color-icon;
+}
+
+a:hover{
+    /*color: $color-icon-hover;*/
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+li {
+  list-style:none;
+  padding: 7px;
+}
+}
+
+.site-info{
+    /*margin-top: -24px;*/
+    color: $footer-text;
+    text-align: center;
+    margin: 0;
+    /*background-color:$dark-purple;*/
+}
+
+.connect{
+    font-size: 1.5rem;
+    color: $footer-text;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+header hr{
+display: none;
+}
+
+
+
+
+@media screen and(min-width: 500px){
+    /*Header*/
+    .header-background{
+    height: 150px;
+}
+
+    #masthead{
+   
+    grid-template-rows: 1fr;
+    grid-template-columns:320px auto;
+    max-height: 150px;
+}
+   .site-branding{
+    grid-column:1;
+}
+.custom-logo-link{
+text-align: left;
+}
+
+.site-branding{
+   
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+    align-content: end; 
+}
+
+.site-title{
+    margin-top: 0px;
+    align-self: flex-end;
+    justify-content: flex-start;
+}
+
+#site-navigation{
+    display: grid;
+    
+    grid-column: 2;
+    grid-row: 1;
+    
+    /*grid-template-rows: 50px auto;*/
+     border-bottom: 2px solid white;
+     padding-bottom: 0px;
+     max-height: 122px;
+     
+     margin-top: 0px;
+     padding-right: 10px;
+
+}
+
+header hr{
+    display: inline;
+    margin-bottom: 0;
+    padding-top: -20px;
+}
+#primary-menu{
+    
+    /*display: flex;*/
+    
+    /*grid-row: 2;*/
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+   
+}
+}
+

@@ -1,0 +1,96 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-content{
+    margin-top: 0 !important;
+ 
+    img{
+    width: 100%;
+    margin: 0;
+    }
+}
+.wp-caption{
+        margin-top: 0 !important;
+}
+article{
+       margin-bottom: 0 !important;
+}
+
+/*Header post title*/
+
+h1{
+    text-align: center !important;
+    color: $post-title !important;
+    font-size: 1.5rem !important;
+}
+
+.site-branding p{
+    margin-top: -20px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+/*Contact Form*/
+.wpforms-form{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    border: 1px solid $dark-purple;
+    padding: 20px;
+}
+
+.wpforms-confirmation-container-full{
+    text-align: center !important;
+}
+
+
+
+#page .form-title{
+    display: none;
+    text-align: center;
+}
+
+#post-276 .form-title{
+    display: inline;
+    text-align: center;
+}
+@media screen and(min-width: 500px){
+    
+   .content-area{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site-branding p{
+    margin-top: 85px;
+    margin-bottom: 21px;
+    font-size: 2rem;
+    
+}
+h1{
+    font-size: 2rem !important;
+}
+}
