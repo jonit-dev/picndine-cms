@@ -23,7 +23,7 @@
 
 .entry-content{
     margin-top: 0 !important;
- 
+
     img{
     width: 100%;
     margin: 0;
@@ -49,7 +49,7 @@ h1{
     margin-bottom: 16px;
     font-size: 1.5rem;
     font-weight: bold;
-    
+
 }
 
 /*Contact Form*/
@@ -77,8 +77,100 @@ h1{
     display: inline;
     text-align: center;
 }
-@media screen and(min-width: 500px){
-    
+
+
+//background food effect{
+.food-background{
+	margin: 0;
+	padding: 0;
+	position: relative;
+
+}
+.phone-camera{
+	position: absolute;
+
+	// margin: 0;
+	width: 100%;
+	padding: 0;
+
+	bottom: 0;
+	margin-right: 0;
+
+
+
+	img{
+		float: right;
+
+		margin-bottom: 7px;
+		width: 40%;
+		height: auto;
+
+		}
+
+		animation-name: zoom;
+		animation-duration: 2s;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+}
+
+//Food text
+.food-title{
+	position: relative;
+	margin-top: -45%;
+	margin-left: 10px;
+	margin-bottom: 5%;
+  z-index: 0;
+
+	width: 300px;
+  h2{
+		margin: 0;
+	}
+	p{
+		margin: 0;
+	}
+ p:nth-of-type(2){
+	 text-align: center;
+ }
+	img{
+	 width: 100px;
+   text-align: center;
+
+	 margin-top: 20px;
+	}
+
+	animation-name: opacity;
+	animation-duration: 2s;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+
+}
+//Animation
+//Phone Picture
+@keyframes zoom{
+	0% {
+	    transform: scale(1.4);
+			opacity: 0;
+	  }
+	100% {
+	    transform: scale(1);
+			opacity: 1;
+	  }
+}
+
+//Main Photo Title
+@keyframes opacity{
+	0% {
+	    transform: scale(.6);
+			opacity: 0;
+	  }
+	100% {
+	    transform: scale(1);
+			opacity: 1;
+	  }
+}
+
+@media screen and(min-width: 600px){
+
    .content-area{
     max-width: 1200px;
     margin-left: auto;
@@ -88,9 +180,44 @@ h1{
     margin-top: 85px;
     margin-bottom: 21px;
     font-size: 2rem;
-    
+
 }
 h1{
     font-size: 2rem !important;
 }
+
+.food-title{
+	text-align: left;
+	margin-top: -30%;
+	margin-left: 10%;
+	margin-bottom: 6%;
+
+	width: 500px;
+
+	img{
+	 width: 130px;
+	 margin-top: 0;
+	}
+
+}
+}
+@media screen and(min-width: 700px){
+	.food-title{
+		margin-bottom: 7%;
+	}
+}
+@media screen and(min-width: 800px){
+	.food-title{
+		margin-bottom: 9%;
+	}
+}
+@media screen and(min-width: 900px){
+	.food-title{
+		margin-bottom: 12%;
+	}
+}
+@media screen and(min-width: 1000px){
+	.food-title{
+		margin-bottom: 15%;
+	}
 }

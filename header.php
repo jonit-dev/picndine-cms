@@ -16,7 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-        <link rel="stylesheet" href="wp-content/themes/picndine-theme/css/style.css">
+  <link rel="stylesheet" href="wp-content/themes/picndine-theme/style.css">
+
 
 	<?php wp_head(); ?>
 </head>
@@ -26,7 +27,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'picndine-theme' ); ?></a>
         <div class="header-background">
 	<header id="masthead" class="site-header">
-	
+
             <div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -47,7 +48,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			
+
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-primary',
@@ -57,7 +58,7 @@
 			?>
 		</nav><!-- #site-navigation -->
                 <hr>
-          
+
 	</header><!-- #masthead -->
         </div>
 	<div id="content" class="site-content">
