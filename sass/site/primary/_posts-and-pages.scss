@@ -22,60 +22,60 @@
 }
 
 .entry-content{
-    margin-top: 0 !important;
+	margin-top: 0 !important;
 
-    img{
-    width: 100%;
-    margin: 0;
-    }
+	img{
+		width: 100%;
+		margin: 0;
+	}
 }
 .wp-caption{
-        margin-top: 0 !important;
+	margin-top: 0 !important;
 }
 article{
-       margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 /*Header post title*/
 
 h1{
-    text-align: center !important;
-    color: $post-title !important;
-    font-size: 1.5rem !important;
+	text-align: center !important;
+	color: $post-title !important;
+	font-size: 1.5rem !important;
 }
 
 .site-branding p{
-    margin-top: -20px;
-    margin-bottom: 16px;
-    font-size: 1.5rem;
-    font-weight: bold;
+	margin-top: -20px;
+	margin-bottom: 16px;
+	font-size: 1.5rem;
+	font-weight: bold;
 
 }
 
 /*Contact Form*/
 .wpforms-form{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-    border: 1px solid $dark-purple;
-    padding: 20px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+	border: 1px solid $dark-purple;
+	padding: 20px;
 }
 
 .wpforms-confirmation-container-full{
-    text-align: center !important;
+	text-align: center !important;
 }
 
 
 
 #page .form-title{
-    display: none;
-    text-align: center;
+	display: none;
+	text-align: center;
 }
 
 #post-276 .form-title{
-    display: inline;
-    text-align: center;
+	display: inline;
+	text-align: center;
 }
 
 
@@ -105,12 +105,12 @@ h1{
 		width: 40%;
 		height: auto;
 
-		}
+	}
 
-		animation-name: zoom;
-		animation-duration: 2s;
-		animation-direction: normal;
-		animation-fill-mode: forwards;
+	animation-name: zoom;
+	animation-duration: 2s;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
 }
 
 //Food text
@@ -118,24 +118,24 @@ h1{
 	position: relative;
 	margin-top: -45%;
 	margin-left: 10px;
-	margin-bottom: 5%;
-  z-index: 0;
+	margin-bottom: 9%;
+	z-index: 0;
 
 	width: 300px;
-  h2{
+	h2{
 		margin: 0;
 	}
 	p{
 		margin: 0;
 	}
- p:nth-of-type(2){
-	 text-align: center;
- }
+	p:nth-of-type(2){
+		text-align: center;
+	}
 	img{
-	 width: 100px;
-   text-align: center;
+		width: 100px;
+		text-align: center;
 
-	 margin-top: 20px;
+		margin-top: 20px;
 	}
 
 	animation-name: opacity;
@@ -148,58 +148,58 @@ h1{
 //Phone Picture
 @keyframes zoom{
 	0% {
-	    transform: scale(1.4);
-			opacity: 0;
-	  }
+		transform: scale(1.4);
+		opacity: 0;
+	}
 	100% {
-	    transform: scale(1);
-			opacity: 1;
-	  }
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 //Main Photo Title
 @keyframes opacity{
 	0% {
-	    transform: scale(.6);
-			opacity: 0;
-	  }
+		transform: scale(.6);
+		opacity: 0;
+	}
 	100% {
-	    transform: scale(1);
-			opacity: 1;
-	  }
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 @media screen and(min-width: 600px){
 
-   .content-area{
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.site-branding p{
-    margin-top: 85px;
-    margin-bottom: 21px;
-    font-size: 2rem;
+	.content-area{
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.site-branding p{
+		margin-top: 85px;
+		margin-bottom: 21px;
+		font-size: 2rem;
 
-}
-h1{
-    font-size: 2rem !important;
-}
-
-.food-title{
-	text-align: left;
-	margin-top: -30%;
-	margin-left: 10%;
-	margin-bottom: 6%;
-
-	width: 500px;
-
-	img{
-	 width: 130px;
-	 margin-top: 0;
+	}
+	h1{
+		font-size: 2rem !important;
 	}
 
-}
+	.food-title{
+		text-align: left;
+		margin-top: -30%;
+		margin-left: 10%;
+		margin-bottom: 6%;
+
+		width: 500px;
+
+		img{
+			width: 130px;
+			margin-top: 0;
+		}
+
+	}
 }
 @media screen and(min-width: 700px){
 	.food-title{

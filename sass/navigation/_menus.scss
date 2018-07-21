@@ -4,25 +4,25 @@
     margin: 0;
     padding: 0;
     height: auto;
-    
+
     background-color: $pink-logo;
-    
-   
+
+
 }
 
 #masthead{
     display: grid;
-    
+
     grid-template-rows: 1fr 190px;
     grid-template-columns:1fr;
     padding: 0;
-    
+
     background-color: $pink-logo;
-    
+
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    
+
 
 }
 .custom-logo-link{
@@ -37,44 +37,44 @@ text-align: center;
 
 .site-branding{
     display: flex;
-    
+
     grid-row:1;
-    
+
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0;
+
+    color: $header-text;
     
-    color: $header-text; 
-    
-    align-content: end; 
+    align-content: center;
 }
 
 .site-title{
     margin-top: -20px;
     align-self: center;
     justify-content: flex-start;
-    
+
     a{
         color: $header-text;
         text-decoration: none;
     }
-    
+
     a:visited{
         color: $header-text;
     }
-       
+
 
 }
 
 
 
 #site-navigation{
- 
+
     grid-row: 2;
-    
+
     justify-content: end;
     align-items:end;
-    
+
     margin-top: -10px;
 }
 /*.menu-main-menu-container{
@@ -89,12 +89,12 @@ text-align: center;
 #primary-menu{
 
     display: flex;
-    
+
     flex-direction: column;
     flex-wrap: wrap;
-    
+
     justify-content: center;
-    
+
     margin: 0;
     padding: 0;
 }
@@ -108,11 +108,11 @@ text-align: center;
 
 #primary-menu{
     a{
-   
+
     text-decoration: none;
-    color: $header-text; 
+    color: $header-text;
     }
-    
+
     /*Menu hover scale effect*/
     li{
     transition: 0.5s;
@@ -136,16 +136,16 @@ text-align: center;
 
 #menu-social{
     display: flex;
-    
+
     margin-left: -40px;
     margin-top: -30px;;
-    
+
     flex-direction:row;
     align-items: center;
     justify-content: center;
-    
+
     flex-wrap:wrap;
-    
+
     a[href*="facebook"]:before {
     content: "\f082";
     font-family: "Font Awesome 5 Brands";
@@ -179,7 +179,7 @@ text-align: center;
     text-decoration: none;
     color: $color-icon;
     font-size: 1rem;
-    
+
     transition: transform 0.5s;
 }
 
@@ -227,7 +227,7 @@ display: none;
 }
 
     #masthead{
-   
+
     grid-template-rows: 1fr;
     grid-template-columns:320px auto;
     max-height: 150px;
@@ -240,11 +240,11 @@ text-align: left;
 }
 
 .site-branding{
-   
+
     flex-direction: row;
     flex-wrap: wrap;
-   
-    align-content: end; 
+
+    align-content: end;
 }
 
 .site-title{
@@ -255,15 +255,15 @@ text-align: left;
 
 #site-navigation{
     display: grid;
-    
+
     grid-column: 2;
     grid-row: 1;
-    
+
     /*grid-template-rows: 50px auto;*/
      border-bottom: 2px solid white;
      padding-bottom: 0px;
      max-height: 122px;
-     
+
      margin-top: 0px;
      padding-right: 10px;
 
@@ -275,18 +275,17 @@ header hr{
     padding-top: -20px;
 }
 #primary-menu{
-    
+
     /*display: flex;*/
-    
+
     /*grid-row: 2;*/
-    
+
     flex-direction: row;
     flex-wrap: wrap;
-    
+
     justify-content: flex-end;
     align-items: flex-end;
-    
-   
-}
-}
 
+
+}
+}
