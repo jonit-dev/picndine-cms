@@ -1,12 +1,21 @@
+//hiding title
+.archive, .category{
+  .page-title{
+    display: none;
+  }
+}
+
+//Solution Title Poition
 .solution-title{
   margin: 0 10px;
-  padding-top: 30px;
-  margin-bottom: -10px;
+  margin-bottom: 17px;
+  padding-top: 0px;
+
   text-align: center;
 }
+//Solution Cards Wrapper Frame
 .solution{
   margin-bottom: 30px;
-  // padding-top: 10px;
   display: flex;
   width: 100%;
 
@@ -15,29 +24,32 @@
   justify-content: center;
   align-items: center;
 
+  //Solution Card
   .solution-container{
+    margin: 20px 20px;
     padding: 20px;
     width: 90%;
-    height: 450px;
+    height: 437px;
 
     flex-shrink: 1;
     flex-grow: 1;
 
     text-align: center;
 
-    margin: 20px 20px;
-
     border: 1px solid black;
     border-radius: 10px;
 
-    box-shadow: 5px 5px $color-shadow;
+    @include image-shadow(gray);
 
+    //Card Icon
     img{
       min-width: 80px;
       max-width: 250px;
 
     }
   }
+
+  //Solution Arrow
   .arrow{
     margin-top: 15px;
     max-width: 50px;
@@ -52,19 +64,39 @@
   }
 }
 
-@media screen and(min-width:600px){
-  .solution{
-    // padding-top: 50px;
-    flex-direction: row;
+@media screen and(min-width:500px) {
+  .solution-title{
+    padding-top: 0px;
   }
-  .solution-container{
-    max-width: 300px;
-    min-width: 150px;
+}
+@media screen and(min-width:600px) {
+  //Solution Title Position
+  .solution-title{
+    padding-top: 21px;
+  }
+}
+@media screen and(min-width:800px){
 
-    height: 450px;
+  //Solution Cards Wrapper Frame
+  .solution{
+    flex-direction: row;
+
+    //Solution Cards
+    .solution-container{
+      max-width: 300px;
+      min-width: 170px;
+      height: 468px;
+    }
   }
+  //Solution Title
+  .solution-title{
+    padding-top: 23px;
+  }
+  //Solution Arrow
   .arrow {
     margin-top: 0px;
+
+    //Rorating Arrow
     img{
       transform: rotate(0deg) !important;
     }

@@ -13,3 +13,78 @@ textarea {
 @import "headings";
 
 @import "copy";
+
+//Header Section
+.food-title{
+	h2{
+		font-family: $font-title1;
+		font-weight: 700;
+		font-style: italic;
+	}
+
+	p{
+		font-family: $font__comment;
+	}
+}
+
+//Solution Section Title
+.solution-title{
+	h2{
+		font-family: $font-title1;
+		font-weight: 700;
+		color: black !important;
+	}
+}
+
+//Solution Card
+.solution-container{
+	h3{
+		font-weight: bold;
+		font-weight: .8rem;
+	}
+
+	p{
+		font-family: $font__comment;
+		font-size: 1.2rem;
+	}
+}
+
+//Carousel Comment
+.persona-text{
+	h5{
+		font-family: $font__comment;
+	}
+
+	p{
+		font-family: $font-title1;
+		font-style: italic;
+		@include shadow(black);
+	}
+}
+
+//Team Member Section
+.team{
+	h2{
+		font-family: $font-title1;
+		font-weight: 700;
+		color: black !important;
+	}
+}
+
+//Team Member Card
+.team-members-frame{
+	h3{
+		font-family: $font-title1;
+	}
+
+	p{
+		font-weight: bold;
+	}
+}
+
+//Team Member Mission Text
+.mission {
+	p{
+		font-family: $font__comment;
+	}
+}

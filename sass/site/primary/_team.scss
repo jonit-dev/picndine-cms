@@ -1,16 +1,30 @@
+//Margin Team Page
+.archive, .category{
+  .team{
+    margin-top: 27px;
+  }
+}
+
+//Team Post Frame
+.team{
+  min-height: 560px;
+}
+
+//Team members cards Frame
 .team-members{
+  margin-top: 45px;
+  margin-bottom: 20px;
   display: flex;
 
   flex-direction: row;
-
   flex-wrap: wrap;
 
   justify-content: center;
   align-items: flex-start;
 
+  //Team member card
   .team-members-frame{
     display: flex;
-    // min-height: 380px;
 
     flex-basis: 200px;
     margin: 10px 20px;
@@ -19,22 +33,41 @@
 
     flex-grow: 0;
     flex-wrap: 0;
+
     justify-content: flex-start;
     align-items: center;
+
+    //Team Member Name
     h3{
       margin-top: 10px;
       margin-bottom: 0;
     }
+
+    //Team Member Title
     p{
       margin: 0;
       text-align: center;
     }
 
+    //Team Member Picture
     img{
       border: 1px solid black;
       border-radius: 100px;
-      box-shadow: 5px 5px $color-shadow;
+      @include image-shadow(gray);
     }
+
+  }
+}
+//Mision Text
+.mission{
+  p{
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: italic;
+    max-width: 600px;
   }
 
 }

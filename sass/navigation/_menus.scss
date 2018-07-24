@@ -45,7 +45,7 @@ text-align: center;
     margin: 0;
 
     color: $header-text;
-    
+
     align-content: center;
 }
 
@@ -53,6 +53,12 @@ text-align: center;
     margin-top: -20px;
     align-self: center;
     justify-content: flex-start;
+
+    h1{
+      text-align: center !important;
+      color: $post-title !important;
+      font-size: 1.5rem !important;
+    }
 
     a{
         color: $header-text;
@@ -77,14 +83,6 @@ text-align: center;
 
     margin-top: -10px;
 }
-/*.menu-main-menu-container{
-    height: 150px;
-
-}*/
-
-/*.menu-main-menu-container{
-    width: 100%;
-}*/
 
 #primary-menu{
 
@@ -111,6 +109,7 @@ text-align: center;
 
     text-decoration: none;
     color: $header-text;
+    font-size: 1.2rem;
     }
 
     /*Menu hover scale effect*/
@@ -118,8 +117,7 @@ text-align: center;
     transition: 0.5s;
     }
     li:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
+      @include animation-increase();
     }
 }
 
@@ -132,13 +130,14 @@ text-align: center;
     padding: 0;
     background-color: $dark-purple;
     margin-bottom: 0;
+    height: 150px;
 }
 
 #menu-social{
     display: flex;
 
     margin-left: -40px;
-    margin-top: -30px;;
+    margin-top: -55px;;
 
     flex-direction:row;
     align-items: center;
@@ -150,25 +149,25 @@ text-align: center;
     content: "\f082";
     font-family: "Font Awesome 5 Brands";
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
     a[href*="twitter"]:before {
     content: "\f081";
     font-family: "Font Awesome 5 Brands";
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
     a[href*="pinterest"]:before {
     content: "\f0d3";
     font-family: "Font Awesome 5 Brands";
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
     a[href*="youtube"]:before {
     content: "\f431";
     font-family: "Font Awesome 5 Brands";
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
  a {
     display: flex;
@@ -180,7 +179,7 @@ text-align: center;
     color: $color-icon;
     font-size: 1rem;
 
-    transition: transform 0.5s;
+    transition: 0.5s;
 }
 
 a:visited{
@@ -188,9 +187,8 @@ a:visited{
 }
 
 a:hover{
-    /*color: $color-icon-hover;*/
-    transform: scale(1.1);
-    transition: 0.5s;
+    @include animation-increase();
+
 }
 li {
   list-style:none;
@@ -199,11 +197,12 @@ li {
 }
 
 .site-info{
-    /*margin-top: -24px;*/
+    margin-top: -33px;
     color: $footer-text;
     text-align: center;
-    margin: 0;
-    /*background-color:$dark-purple;*/
+        p{
+          margin: 0;
+        }
 }
 
 .connect{
@@ -211,6 +210,7 @@ li {
     color: $footer-text;
     text-align: center;
     margin-bottom: -10px;
+    padding-top: 16px;
 }
 
 header hr{
@@ -220,7 +220,7 @@ display: none;
 
 
 
-@media screen and(min-width: 500px){
+@media screen and(min-width: 550px){
     /*Header*/
     .header-background{
     height: 150px;
@@ -251,6 +251,10 @@ text-align: left;
     margin-top: 0px;
     align-self: flex-end;
     justify-content: flex-start;
+
+    h1{
+      font-size: 2rem !important;
+    }
 }
 
 #site-navigation{

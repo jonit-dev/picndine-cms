@@ -2,26 +2,3 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	color: $color-text !important;
 }
-
-.food-title{
-	text-align: center;
-	h2{
-		color: $food-title !important;
-		font-size: 1rem;
-	}
-	p{
-		font-size: .7rem;
-	}
-	color: $food-title;
-}
-
-@media screen and(min-width:500px){
-	.food-title{
-		h2{
-			font-size: 1.8rem;
-		}
-		p{
-			font-size: 1rem;
-		}
-	}
-}

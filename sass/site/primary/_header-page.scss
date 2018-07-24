@@ -1,0 +1,176 @@
+/*Header post title*/
+
+.site-branding p{
+  margin-top: -20px;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+//background food effect{
+.food-background{
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  .header-image{
+    object-fit: cover;
+    // width: 100%;
+    height: auto;
+
+    min-height: 600px;
+  }
+
+
+}
+.phone-camera{
+  position: absolute;
+
+  width: 100%;
+  padding: 0;
+
+  bottom: 0;
+  margin-right: 0;
+
+
+
+  img{
+    float: right;
+
+    margin-bottom: 0px;
+    max-width: 450px;
+    height: auto;
+
+    filter: opacity(80%);
+
+  }
+
+  animation-name: zoom;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+//Food text
+.food-title{
+  position: relative;
+  margin-top: -595px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+  z-index: 0;
+  text-align: center;
+  width: 300px;
+  h2{
+    margin: 0;
+    color: $food-title !important;
+    font-size: 3rem;
+    @include shadow(white);
+    margin-bottom: 18px;
+  }
+  p{
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+    @include shadow(black);
+  }
+  p:nth-of-type(2){
+    text-align: center;
+  }
+  img{
+    width: 130px;
+    text-align: center;
+
+    margin-top: 20px;
+
+    transition: .5s;
+
+    &:hover{
+      @include animation-increase();
+    }
+  }
+
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+}
+//Animation
+//Phone Picture
+@keyframes zoom{
+  0% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+//Main Photo Title
+@keyframes opacity{
+  0% {
+    transform: scale(.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@media screen and(min-width:500px){
+  .food-title{
+    h2{
+      font-size: 3rem;
+      margin-bottom: 20px;
+
+    }
+    p{
+      font-size: 2rem;
+      color: white;
+      @include shadow(black);
+    }
+  }
+
+  .phone-camera{
+    img{
+      filter: opacity(100%);
+    }
+  }
+}
+
+@media screen and(min-width: 600px){
+
+  .content-area{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .site-branding p{
+    margin-top: 85px;
+    margin-bottom: 21px;
+    font-size: 2rem;
+
+  }
+
+  .food-title{
+    text-align: left;
+    margin-top: -450px;
+    margin-left: 10%;
+    margin-bottom: 112px;
+
+    width: 500px;
+
+    img{
+      width: 130px;
+      margin-top: 0;
+    }
+
+  }
+}

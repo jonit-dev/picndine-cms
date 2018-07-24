@@ -1,91 +1,114 @@
-.carousel{
-  margin: 0;
-  padding: 0;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+//Margin Top Carousel Page
+.archive, .category{
+  .carousel{
+    margin-top: 27px;
+  }
 }
 
-/* carousel height */
+/* Carousel Height */
 .carousel-item{
-  min-height: 600px;
-  max-height: 650px;
-
+  min-height: 570px;
   margin: 0;
   padding: 0;
+
+  img{
+    margin-bottom: -37px;
+  }
 
 }
 
 /* Background Slide Color */
 .persona01{
-  background-color: #d52c4b;
+  background-color: $color-carousel1;
 }
 .persona02{
-  background-color: #208c9e;
+  background-color: $color-carousel2;
 }
 .persona03{
-  background-color: #2ad899;
+  background-color: $color-carousel3;
 }
 
-/* Persona frame width / Position */
+/* Persona picture frame - width / Position */
 .persona{
-  /* top:0px; */
-  /* left: 0px; */
-  /* width: 100%; */
-  /* text-align: center; */
+
   position: absolute;
   right: 15%;
-  bottom: 204px;
+  bottom: 169px;
   left: 15%;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #fff;
+  color: $color-normal-text;
   text-align: center;
+
+
+  h3{
+    margin-bottom: 0;
+    padding-top: 6px;
+    @include shadow(white);
+    font-weight: bold;
+    color: $food-title !important;
+  }
+
+  p{
+    margin-bottom: 0;
+    @include shadow(black);
+  }
 }
 
-.persona h3{
-  text-shadow: .5px .5px 1px black;
-}
-
-.persona p{
-  margin-bottom: 0;
-}
-
+//Persona comments text
 .persona-text{
-position: absolute;
-right: 15%;
-bottom: 20px;
-left: 15%;
-z-index: 10;
-padding-top: 20px;
-padding-bottom: 20px;
-color: #fff;
-text-align: center;
+  position: absolute;
+  right: 15%;
+  bottom: 13px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $color-normal-text;
+  text-align: center;
+
+  //Google Play Icon
+  img{
+    text-align: center;
+    width: 130px;
+    margin-top: -30px;
+    transition: .5s;
+
+    &:hover{
+      @include animation-increase();
+    }
+  }
 }
 
+//Hidding comments in Mobile Size
 .persona-text p{
   display: none;
 }
 
-/* Persona image */
+//Persona Profile Picture
 .persona img{
+  margin-bottom: 5px;
   border-radius: 200px;
   width: 250px;
-  box-shadow: 1px 5px 5px black;
+  @include image-shadow(black);
 }
 
+//Comment background Image
 .d-block{
+  margin: 0;
+  padding: 0;
   width:100%;
   display: block;
-  min-height: 600px;
-  max-height: 700px;
+  min-height: 570px;
+  max-height: 650px;
   object-fit: cover;
 
   filter: opacity(35%);
 
 }
 
+//Stars Rating
 .stars{
   display: flex;
   flex-direction: row;
@@ -94,45 +117,76 @@ text-align: center;
 
 .stars img{
   width: 20px;
+  height: 20px;
   box-shadow: none;
 }
 
-/* .col{
-margin-top:-50px;
-} */
-
+//Comment Heading
 h5{
   color: black;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  text-shadow: .5px .5px 1px white;
+  @include shadow(white);
   font-style: italic;
 }
 
+//Comment Text
 .carousel-caption p{
   color: white;
-  text-shadow: .5px .5px 1px black;
+  @include shadow(black);
   font-size: 1.5rem;
 }
 
+
 @media screen and(min-width: 768px){
-  /* .persona_query{
-  top:50px;
-  left: 0px;
-  width: 40% !important;
-  text-align: center;
-  } */
+  //Persona Position
   .persona{
-
-    bottom: 204px;
+    bottom: 136px;
   }
+
+  //Persona Comments Position
   .persona-text{
+    bottom: 100px;
 
-  bottom: 200px;
+    h5{
+      font-size: 2.4rem;
+    }
+
+    p{
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    //Google Play Icon
+    img{
+      width: 130px;
+      margin-top: 0;
+    }
+
+  }
+}
+@media screen and(min-width: 1000px){
+  //Persona Position
+  .persona{
+    bottom: 136px;
+  }
+
+  //Persona Comments Position
+  .persona-text{
+    bottom: 125px;
+
+    h5{
+      font-size: 2.7rem;
+    }
+
+    //Showing Comment Text
+    p{
+      display: block;
+      font-size: 1.7rem;
+      margin-bottom: 0;
+    }
 
   }
 
-  .persona-text p{
-    display: block;
-  }
 }
