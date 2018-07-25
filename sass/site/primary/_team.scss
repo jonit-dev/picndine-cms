@@ -8,39 +8,29 @@
 //Team Post Frame
 .team{
   min-height: 560px;
+
+  width: 100%;
 }
 
 //Team members cards Frame
 .team-members{
   margin-top: 45px;
   margin-bottom: 20px;
-  display: flex;
 
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
 
-  justify-content: center;
-  align-items: flex-start;
-
-  //Team member card
+  //Team member card (Old Browsers)
   .team-members-frame{
-    display: flex;
-
-    flex-basis: 200px;
-    margin: 10px 20px;
-
-    flex-direction: column;
-
-    flex-grow: 0;
-    flex-wrap: 0;
-
-    justify-content: flex-start;
-    align-items: center;
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 
     //Team Member Name
     h3{
       margin-top: 10px;
       margin-bottom: 0;
+      text-align: center;
     }
 
     //Team Member Title
@@ -58,16 +48,88 @@
 
   }
 }
+
 //Mision Text
 .mission{
   p{
+    clear: both;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px 20px;
     padding-bottom: 20px;
     text-align: center;
     font-size: 1.4rem;
     font-style: italic;
     max-width: 600px;
   }
+}
 
+//Browser that supports flex
+@supports(display:flex){
+  .team-members{
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    //Team member card
+    .team-members-frame{
+      display: flex;
+
+      flex-basis: 200px;
+      margin: 10px 20px;
+
+      flex-direction: column;
+
+      flex-grow: 0;
+      flex-wrap: 0;
+
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  .mission{
+    p{
+      padding: 0px 20px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+//Media Queries to old Browsers that not support Display Flex
+@media screen and(min-width: 650px){
+  .team-members{
+    .team-members-frame{
+      width: 48%;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+  }
+}
+@media screen and(min-width: 800px){
+  .team-members{
+    .team-members-frame{
+      width: 18%;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+  }
+
+}
+
+
+
+
+
+//clearfix
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
 }

@@ -16,23 +16,16 @@
 //Solution Cards Wrapper Frame
 .solution{
   margin-bottom: 30px;
-  display: flex;
   width: 100%;
-
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
+  padding: 0 2%;
 
   //Solution Card
   .solution-container{
+    float:left;
     margin: 20px 20px;
     padding: 20px;
-    width: 90%;
+    width: 96%;
     height: 437px;
-
-    flex-shrink: 1;
-    flex-grow: 1;
 
     text-align: center;
 
@@ -55,11 +48,33 @@
     max-width: 50px;
     min-width: 30px;
 
-    flex-shrink: 1;
-    flex-grow: 1;
+    margin-left: auto;
+    margin-right: auto;
 
     img{
       transform: rotate(90deg);
+    }
+  }
+}
+
+//Flex Browser Support
+@supports (display:flex){
+  .solution{
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    .solution-container{
+      float: none;
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+    .arrow{
+      flex-shrink: 1;
+      flex-grow: 1;
     }
   }
 }
@@ -79,7 +94,6 @@
 
   //Solution Cards Wrapper Frame
   .solution{
-    flex-direction: row;
 
     //Solution Cards
     .solution-container{
@@ -88,17 +102,33 @@
       height: 468px;
     }
   }
+
+  //Flex Browser Support
+  @supports (display: flex){
+    .solution{
+      flex-direction: row;
+    }
+  }
   //Solution Title
   .solution-title{
     padding-top: 23px;
   }
   //Solution Arrow
   .arrow {
-    margin-top: 0px;
+    padding-top: 230px;
+    float: left;
 
     //Rorating Arrow
     img{
       transform: rotate(0deg) !important;
+    }
+  }
+  //Flex Browser Support
+  @supports(display: flex){
+    .arrow{
+      margin-top: 0;
+      padding-top: 0;
+      float: none;
     }
   }
 }

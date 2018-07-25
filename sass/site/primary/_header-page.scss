@@ -1,5 +1,4 @@
 /*Header post title*/
-
 .site-branding p{
   margin-top: -20px;
   margin-bottom: 16px;
@@ -8,7 +7,7 @@
 
 }
 
-//background food effect{
+//Background Header Image
 .food-background{
   display: block;
   margin: 0;
@@ -17,14 +16,13 @@
 
   .header-image{
     object-fit: cover;
-    // width: 100%;
     height: auto;
 
     min-height: 600px;
   }
-
-
 }
+
+//Background Camera Image
 .phone-camera{
   position: absolute;
 
@@ -34,26 +32,31 @@
   bottom: 0;
   margin-right: 0;
 
-
-
+  //Positioning Camera
   img{
     float: right;
-
     margin-bottom: 0px;
     max-width: 450px;
     height: auto;
-
-    filter: opacity(80%);
-
   }
 
+  //Camera Zoom Animation
   animation-name: zoom;
   animation-duration: 2s;
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
 
-//Food text
+//Adding camera opacity when picture reaches text area
+@supports(filter:opacity(70%)){
+  .phone-camera{
+    img{
+      filter: opacity(70%);
+    }
+  }
+}
+
+//Header text frame
 .food-title{
   position: relative;
   margin-top: -595px;
@@ -63,6 +66,8 @@
   z-index: 0;
   text-align: center;
   width: 300px;
+
+  //Header Text
   h2{
     margin: 0;
     color: $food-title !important;
@@ -70,6 +75,7 @@
     @include shadow(white);
     margin-bottom: 18px;
   }
+  //Header Paragraph
   p{
     margin: 0;
     font-size: 2rem;
@@ -79,12 +85,12 @@
   p:nth-of-type(2){
     text-align: center;
   }
+  //Google Play Icon
   img{
     width: 130px;
     text-align: center;
 
     margin-top: 20px;
-
     transition: .5s;
 
     &:hover{
@@ -92,6 +98,7 @@
     }
   }
 
+  //Opacity Animation config
   animation-name: opacity;
   animation-duration: 2s;
   animation-direction: normal;
@@ -123,7 +130,6 @@
   }
 }
 
-
 @media screen and(min-width:500px){
   .food-title{
     h2{
@@ -137,26 +143,20 @@
       @include shadow(black);
     }
   }
-
-  .phone-camera{
-    img{
-      filter: opacity(100%);
-    }
-  }
 }
 
 @media screen and(min-width: 600px){
-
+  //Repositioning Header area text
   .content-area{
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
+
   .site-branding p{
     margin-top: 85px;
     margin-bottom: 21px;
     font-size: 2rem;
-
   }
 
   .food-title{
@@ -164,13 +164,21 @@
     margin-top: -450px;
     margin-left: 10%;
     margin-bottom: 112px;
-
     width: 500px;
 
+    //Google Play Button
     img{
-      width: 130px;
       margin-top: 0;
     }
 
+  }
+}
+
+//Removing opacity when camera leaves text area
+@media screen and(min-width: 900px){
+  .phone-camera{
+    img{
+      filter: opacity(100%);
+    }
   }
 }

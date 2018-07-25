@@ -68,6 +68,9 @@
   color: $color-normal-text;
   text-align: center;
 
+  //Background text color to old Browsers
+  background-color: rgba(0, 0, 0, .4);
+
   //Google Play Icon
   img{
     text-align: center;
@@ -102,10 +105,23 @@
   display: block;
   min-height: 570px;
   max-height: 650px;
-  object-fit: cover;
+}
 
-  filter: opacity(35%);
+//Browser that supports Object-fit
+@supports (object-fit:cover){
+  .d-block{
+    object-fit: cover;
+  }
+}
 
+//Browser that supports filter
+@supports (filter:opacity(35%)){
+  .d-block{
+    filter: opacity(35%);
+  }
+  .persona-text{
+    background-color: transparent;
+  }
 }
 
 //Stars Rating
