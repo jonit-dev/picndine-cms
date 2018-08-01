@@ -125,6 +125,8 @@ function picndine_theme_scripts() {
 	wp_enqueue_style( 'picndine-theme-style', get_stylesheet_uri() );
         wp_enqueue_style( 'picndine-theme-style-font-awesome', 'https://use.fontawesome.com/releases/v5.1.0/css/all.css' );
 
+	wp_enqueue_script( 'picndine-theme-jquery', 'https://code.jquery.com/jquery-3.3.1.min.js');
+	wp_enqueue_script( 'picndine-theme-contact-validation', get_template_directory_uri() . '/js/contact-validate.js');
 	wp_enqueue_script( 'picndine-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'picndine-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -144,6 +146,7 @@ require get_template_directory() . '/inc/custom-header.php';
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
